@@ -1,0 +1,116 @@
+:root {
+    --primary-blue: #8B0000;  /* Burgundy color */
+    --secondary-blue: #4C0000;  /* Darker burgundy color */
+    --light-gray: #F5F5F5;
+    --white: #FFFFFF;
+    --dark-text: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--secondary-blue);
+    margin-bottom: 20px;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.form-toggle button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: var(--dark-text);
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-toggle button.active {
+    color: var(--primary-blue);
+    opacity: 1;
+    border-bottom: 3px solid var(--primary-blue);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-text);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-blue);
+}
+
+.form-footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--dark-text);
+}
+
+#signup-form {
+    display: none;
+}
+
+.ashesi-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}

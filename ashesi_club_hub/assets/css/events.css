@@ -1,0 +1,128 @@
+:root {
+    --primary-blue: #8B0000;
+    --secondary-blue: #4C0000;
+    --light-gray: #F5F5F5;
+    --white: #FFFFFF;
+    --dark-text: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+}
+
+header {
+    background-color: var(--primary-blue);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-blue);
+}
+
+
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+}
+
+.event-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.event-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--secondary-blue);
+}
+
+.event-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.event-club {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.event-club img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.event-slots {
+    color: var(--dark-text);
+    font-size: 14px;
+}
+
+.btn-rsvp {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-rsvp.active {
+    background-color: var(--dark-text);
+}
+
+.event-date {
+    color: var(--dark-text);
+    font-size: 14px;
+    margin-bottom: 10px;
+}

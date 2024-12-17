@@ -1,0 +1,147 @@
+:root {
+    --primary-blue: #8B0000;
+    --secondary-blue: #4C0000;
+    --light-gray: #F5F5F5;
+    --white: #FFFFFF;
+    --dark-text: #333333;
+    --success-green: #28a745;
+    --warning-yellow: #ffc107;
+    --danger-red: #dc3545;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--primary-blue);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width: 200px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.manage-users-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.manage-users-container h1 {
+    color: var(--primary-blue);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.user-card {
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+}
+
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.user-header h2 {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+}
+
+.user-role {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.user-meta {
+    margin-bottom: 20px;
+}
+
+.user-meta div {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.user-actions {
+    display: flex;
+    margin-top: auto;
+}
+
+.btn {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete {
+    background-color: var(--danger-red);
+    color: var(--white);
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .users-grid {
+        grid-template-columns: 1fr;
+    }
+}
